@@ -13,6 +13,9 @@ function update_visualization_func = show_video(img_files, video_path, resize_im
 %
 %   Joao F. Henriques, 2014
 %   http://www.isr.uc.pt/~henriques/
+%
+%   revised by: Yang Li, August, 2014
+%   http://ihpdep.github.io
 
 
 	%store one instance per frame
@@ -43,9 +46,9 @@ function update_visualization_func = show_video(img_files, video_path, resize_im
 	function redraw(frame)
 		%render main image
 		im = imread([video_path img_files{frame}]);
-		if size(im,3) > 1,
-			im = rgb2gray(im);
-		end
+% 		if size(im,3) > 1,
+% 			im = rgb2gray(im);
+% 		end
 		if resize_image,
 			im = imresize(im, 0.5);
 		end

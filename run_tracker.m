@@ -42,7 +42,7 @@
 function [precision, fps] = run_tracker(video, kernel_type, feature_type, show_visualization, show_plots)
 
 	%path to the videos (you'll be able to choose one with the GUI).
-	base_path ='F:\desk\weiyun\codes\benchmark\data';
+	base_path ='.\data';
 
 	%default settings
 	if nargin < 1, video = 'choose'; end
