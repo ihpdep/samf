@@ -1,11 +1,11 @@
 # A Scale Adaptive Kernel Correlation Filter Tracker with Feature Integration (SAMF)
-This is the matlab code of SAMF[1]. It won the second place in VOT 2014(http://votchallenge.net/vot2014/index.html). The implementation is built upon the code of [2]. The codes provided by [3,4,5] are also used in the implementation. 
+This is the matlab code of SAMF[1]. It won the second place in [VOT 2014](http://votchallenge.net/vot2014/index.html). The implementation is built upon the code of [2]. The codes provided by [3,4,5] are also used in the implementation. 
 
 
 #Instructions:
-1) Modify the base_path in "run_tracker.m" with your own setting.
-2) Run the "run_tracker.m" script in MATLAB.
-3) Choose sequence.
+* 1) Modify the base_path in "run_tracker.m" with your own setting.
+* 2) Run the "run_tracker.m" script in MATLAB.
+* 3) Choose sequence.
 
 #Acknowledge:
 Many thanks to Guy Koren and Jifeng Ning(宁纪锋) for helping me to find and fix bugs!
