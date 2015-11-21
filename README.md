@@ -1,16 +1,16 @@
-# SAMF
+# A Scale Adaptive Kernel Correlation Filter Tracker with Feature Integration (SAMF)
 This is the matlab code of SAMF[1]. It won the second place in VOT 2014(http://votchallenge.net/vot2014/index.html). The implementation is built upon the code of [2]. The codes provided by [3,4,5] are also used in the implementation. 
 
 
-Instructions:
+#Instructions:
 1) Modify the base_path in "run_tracker.m" with your own setting.
 2) Run the "run_tracker.m" script in MATLAB.
 3) Choose sequence.
 
-For CVPR2013 benchmark[]
+#Acknowledge:
+Many thanks to Guy Koren and Jifeng Ning(宁纪锋) for helping me to find and fix bugs!
 
-
-Contact:
+#Contact:
 Yang Li,
 liyang89@zju.edu.cn
 ihpdep.github.io
@@ -19,7 +19,7 @@ Jianke Zhu
 jkzhu@zju.edu.cn
 jkzhu.github.io
 
-
+#Reference
 [1] Yang Li, Jianke Zhu. 
 	"A Scale Adaptive Kernel Correlation Filter Tracker with Feature Integration" 
 	European Conference on Computer Vision, Workshop VOT2014 (ECCVW), 2014
@@ -39,7 +39,3 @@ jkzhu.github.io
 [5] David Ross, Jongwoo Lim, Ruei-Sung Lin, Ming-Hsuan Yang. 
 	"Incremental Learning for Robust Visual Tracking"
 	In the International Journal of Computer Vision, Special Issue: Learning for Vision, 2007.
-
-[6] Y. Wu, J. Lim, M.-H. Yang, 
-	"Online Object Tracking: A 	Benchmark", CVPR 2013.
-	Website: http://visual-tracking.net/

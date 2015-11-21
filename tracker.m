@@ -79,7 +79,7 @@ w2c = temp.w2crs;
 	positions = zeros(numel(img_files), 2);  %to calculate precision
 	rect_results = zeros(numel(img_files), 4);  %to calculate 
     response = zeros(size(cos_window,1),size(cos_window,2),size(search_size,2));
-    szid = 0;
+    szid = 1;
     
 	for frame = 1:numel(img_files),
 		%load image
@@ -121,22 +121,25 @@ w2c = temp.w2crs;
 			%will appear at the top-left corner, not at the center (this is
 			%discussed in the paper). the responses wrap around cyclically.
 			[vert_delta,tmp, horiz_delta] = find(response == max(response(:)), 1);
-            szid = floor(tmp/(size(cos_window,2)+1));
-            horiz_delta = tmp - (szid * size(cos_window,2));
+
+            szid = floor((tmp-1)/(size(cos_window,2)))+1;
+
+            horiz_delta = tmp - ((szid -1)* size(cos_window,2));
 			if vert_delta > size(zf,1) / 2,  %wrap around to negative half-space of vertical axis
 				vert_delta = vert_delta - size(zf,1);
 			end
 			if horiz_delta > size(zf,2) / 2,  %same for horizontal axis
 				horiz_delta = horiz_delta - size(zf,2);
             end
-            tmp_sz = floor((target_sz * (1 + padding))*search_size(i));
+
+            tmp_sz = floor((target_sz * (1 + padding))*search_size(szid));
             current_size = tmp_sz(2)/window_sz(2);
 			pos = pos + current_size*cell_size * [vert_delta - 1, horiz_delta - 1];
 		end
 
 		%obtain a subwindow for training at newly estimated target position
 % 		patch = get_subwindow(im, pos, window_sz);
-        target_sz = target_sz * search_size(szid+1);
+        target_sz = target_sz * search_size(szid);
         tmp_sz = floor((target_sz * (1 + padding)));
         param0 = [pos(2), pos(1), tmp_sz(2)/window_sz(2), 0,...
                     tmp_sz(1)/window_sz(2)/(window_sz(1)/window_sz(2)),0];
