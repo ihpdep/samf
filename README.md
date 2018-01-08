@@ -15,6 +15,8 @@ Jianke Zhu
 jkzhu@zju.edu.cn
 jkzhu.github.io
 
+[Our Lab website](http://www.smartvisionlab.org)
+
 ## Reference
 [1] Yang Li, Jianke Zhu. 
 	"A Scale Adaptive Kernel Correlation Filter Tracker with Feature Integration" 
